@@ -1,0 +1,639 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% load static %}
+    <!-- hero-2-start -->
+    <div class="hero-2-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="hero-2-carousel owl-carousel">
+                        <div class="h2c-box">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="hero-2-carousel-left">
+                                        <div><span class="h2cl-title">Flat</span></div>
+                                        <div class="h2cl-off">
+                                            <h2>20 <span>%</span></h2>
+                                            <h3>off</h3>
+                                        </div>
+                                        <p class="h2cl-text">on Domestic hotel bookings</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="slider-hero slider-hero2-right">
+                                        <h5 class="sh-intro">Welcome to</h5>
+                                        <h2 class="sh-title">Grand Hotel</h2>
+                                        <h4 class="sh-text">A place to experience and enjoy the life</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="h2c-box">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="hero-2-carousel-left">
+                                        <div><span class="h2cl-title">Flat</span></div>
+                                        <div class="h2cl-off">
+                                            <h2>20 <span>%</span></h2>
+                                            <h3>off</h3>
+                                        </div>
+                                        <p class="h2cl-text">on Domestic hotel bookings</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="slider-hero slider-hero2-right">
+                                        <h5 class="sh-intro">Welcome to</h5>
+                                        <h2 class="sh-title">Grand Hotel</h2>
+                                        <h4 class="sh-text">A place to experience and enjoy the life</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="h2c-box">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="hero-2-carousel-left">
+                                        <div><span class="h2cl-title">Flat</span></div>
+                                        <div class="h2cl-off">
+                                            <h2>20 <span>%</span></h2>
+                                            <h3>off</h3>
+                                        </div>
+                                        <p class="h2cl-text">on Domestic hotel bookings</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="slider-hero slider-hero2-right">
+                                        <h5 class="sh-intro">Welcome to</h5>
+                                        <h2 class="sh-title">Grand Hotel</h2>
+                                        <h4 class="sh-text">A place to experience and enjoy the life</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </br>
+        <div class="hero-2-revervation-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="hero2-reservation">
+                            <div class="hero2-reservation-form">
+                                <span>
+                                     <h2 style="color:white" class="rh-title">Reservation</h2>
+                                </span>
+                                </br>
+
+                                <form method="post" enctype="multipart/form-data">
+                                    {% csrf_token %}
+                                    {% if messages %}
+                                        {% for message in messages %}
+                                            <h4 style="color:white">{{message}}</h4>
+                                        {% endfor %}
+                                    {% endif %}
+                                    </br>
+
+                                    <div class="rhf-input-box">
+                                        <span>Name</span>
+                                        <input type="text"  placeholder="Complete Name" name="name" id="name" required>
+                                    </div>
+                                    <div class="rhf-input-box">
+                                        <span>Phone No</span>
+                                        <input type="text"  placeholder="Phone Number" name="phone_no" id="phone_no" required>
+                                    </div>
+                                    <div class="rhf-input-box">
+                                        <span>Email</span>
+                                        <input type="text"  placeholder="Email" name="email" id="email">
+                                    </div>
+
+                                    <div class="rhf-input-box">
+                                        <span>Arrival Date </span>
+                                        <input type="text" id="datepicker3" placeholder="Check In" name="date_from" required>
+                                    </div>
+
+                                    <div class="rhf-input-box">
+                                        <span>Departure Date </span>
+                                        <input type="text" id="datepicker2" placeholder="Check Out" name="date_to" required>
+                                    </div>
+
+                                    <div class="rhf-persons-room">
+                                        <div class="rhf-persons">
+                                            <span>Persons </span>
+                                            <input type="number" value="1" name="person" placeholder="No:Of Persons" required>
+                                        </div>
+                                        <div class="rhf-room">
+                                            <span>Rooms</span>
+                                            <input type="number" value="1" name="room" placeholder="No:Of Rooms" required>
+                                        </div>
+                                    </div>
+
+                                    <!---->
+
+                                    <!---->
+                                    <div class="rhf-send">
+                                        <button><i class="fa fa-check"></i></button>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- hero-2-end -->
+    <!-- h2-about-area-start -->
+    <div class="h2-about-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="h2-about-head">
+                        <h2 class="h2ah-title">about our <span>grand hotel</span></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="h2-about-why-choose">
+                        <h3 class="h2awc-title">why choose us</h3>
+                        <p class="h2awc-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="service-2">
+                        <div class="service-box">
+                            <div class="service-icon">
+                                <i class="icofont icofont-soup-bowl"></i>
+                            </div>
+                            <div class="service-content">
+                                <h4>Lexuary Spa</h4>
+                                <p>Phasellus tristique vel massa sed faucibus. Integer erat velit, commodo vitae mi quis.</p>
+                            </div>
+                        </div>
+                        <div class="service-box">
+                            <div class="service-icon">
+                                <i class="icofont icofont-wifi-router"></i>
+                            </div>
+                            <div class="service-content">
+                                <h4>Free wi-fi</h4>
+                                <p>Phasellus tristique vel massa sed faucibus. Integer erat velit, commodo vitae mi quis.</p>
+                            </div>
+                        </div>
+                        <div class="service-box">
+                            <div class="service-icon">
+                                <i class="icofont icofont-dining-table"></i>
+                            </div>
+                            <div class="service-content">
+                                <h4>Resturant</h4>
+                                <p>Phasellus tristique vel massa sed faucibus. Integer erat velit, commodo vitae mi quis.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 col-sm-6 col-xs-12">
+                    <div class="h2-about-video">
+                        <img src="{% static 'img/home2/about-video.jpg' %}" alt="">
+                        <a class="popup-youtube" href="https://www.youtube.com/watch?v=apJnxEIItXE"><i class="fa fa-play-circle"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- h2-about-area-end -->
+    <!-- off-book-area-start -->
+    <div class="off-book-area bg-with-black">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9 col-sm-8 col-xs-12">
+                    <div class="off-book-left">
+                        <h2>Today <span>25% Off</span> on Hotel room or any Other Events...</h2>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-12">
+                    <div class="off-book-right">
+                        <a href="#">Book  Now !</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- off-book-area-end -->
+    <!-- room-and-suits-area-start -->
+    <div class="room-and-suits-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 col-sm-12 col-xs-12">
+                    <div class="room-and-suits-head">
+                        <div class="section-title text-center">
+                            <div class="st-icon">
+                                <img src="{% static 'img/home1/section-title-icon.png' %}" alt="">
+                            </div>
+                            <h2>room & <span>suites</span></h2>
+                            <p>Etiam efficitur, ex vel dignissim rutrum, nibh justo dignissim nisl, sed interdum mauris metus nec ex. Interdum et malesuada fames ac ante ipsum </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="room-suits-carousel owl-carousel hidden-xs">
+            {% for Rooms in Room %}
+            <div class="room-suits-box prr-box">
+                <div class="prr-img-box">
+                    <img src={{Rooms.Main_Image.url}} alt="" style="width:800px;height:500px">
+                    <div class="prr-img-content">
+                        <h3 class="prr-img-content-price">{{Rooms.Price}} / </h3>
+                        <h5 class="prr-img-content-time">night</h5>
+                    </div>
+                </div>
+                <div class="prr-form-area">
+                    <h3 class="prr-form-title">{{Rooms.Room_Description}}</h3>
+                    <p class="prr-form-text">{{Rooms.Long_Description}}</p>
+                    <form action="#">
+                        <div class="prr-form-input">
+                            <!-- <div class="prr-form-input-box prr-fib-select">
+                                <select>
+                                    <option>2 people</option>
+                                    <option>3 people</option>
+                                    <option>4 people</option>
+                                </select>
+                            </div>
+                            <div class="prr-form-input-box prr-fib-input">
+                                <input type="text" id="datepicker3" placeholder="Date">
+                            </div> -->
+                            <a href="booking_details"><input type="button" value="Book Now" style="width:100px;font-bold:True">
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            {% endfor %}
+<!--            <div class="room-suits-box prr-box">-->
+<!--                <div class="prr-img-box">-->
+<!--                    <img src="{% static 'img/home2/room-suits-bg.jpg' %}" alt="">-->
+<!--                    <div class="prr-img-content">-->
+<!--                        <h3 class="prr-img-content-price">$ 200  /</h3>-->
+<!--                        <h5 class="prr-img-content-time">night</h5>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="prr-form-area">-->
+<!--                    <h3 class="prr-form-title">Suoerior villa </h3>-->
+<!--                    <p class="prr-form-text">Semper ac dolor vitae accumsan. Cras interdum hendrerit lacinia. Phasellus accumsan urna vitae molestie interdum. Nam sed placerat libero, non eleifend dolor. Cras interdum hendrerit lacinia. Phasellus accumsan urna vitae molestie interdum. Nam sed placerat libero, non eleifend dolor. </p>-->
+<!--                    <form action="#">-->
+<!--                        <div class="prr-form-input">-->
+<!--                            &lt;!&ndash; <div class="prr-form-input-box prr-fib-select">-->
+<!--                                <select>-->
+<!--                                    <option>2 people</option>-->
+<!--                                    <option>3 people</option>-->
+<!--                                    <option>4 people</option>-->
+<!--                                </select>-->
+<!--                            </div>-->
+<!--                            <div class="prr-form-input-box prr-fib-input">-->
+<!--                                <input type="text" id="datepicker4" placeholder="Date">-->
+<!--                            </div> &ndash;&gt;-->
+<!--                            <input type="submit" value="Book Now">-->
+<!--                        </div>-->
+<!--                    </form>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="room-suits-box prr-box">-->
+<!--                <div class="prr-img-box">-->
+<!--                    <img src="{% static 'img/home2/room-suits-bg.jpg' %}" alt="">-->
+<!--                    <div class="prr-img-content">-->
+<!--                        <h3 class="prr-img-content-price">$ 200  /</h3>-->
+<!--                        <h5 class="prr-img-content-time">night</h5>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="prr-form-area">-->
+<!--                    <h3 class="prr-form-title">Suoerior villa </h3>-->
+<!--                    <p class="prr-form-text">Semper ac dolor vitae accumsan. Cras interdum hendrerit lacinia. Phasellus accumsan urna vitae molestie interdum. Nam sed placerat libero, non eleifend dolor. Cras interdum hendrerit lacinia. Phasellus accumsan urna vitae molestie interdum. Nam sed placerat libero, non eleifend dolor. </p>-->
+<!--                    <form action="#">-->
+<!--                        <div class="prr-form-input">-->
+<!--                            &lt;!&ndash; <div class="prr-form-input-box prr-fib-select">-->
+<!--                                <select>-->
+<!--                                    <option>2 people</option>-->
+<!--                                    <option>3 people</option>-->
+<!--                                    <option>4 people</option>-->
+<!--                                </select>-->
+<!--                            </div>-->
+<!--                            <div class="prr-form-input-box prr-fib-input">-->
+<!--                                <input type="text" id="datepicker5" placeholder="Date">-->
+<!--                            </div> &ndash;&gt;-->
+<!--                            <input type="submit" value="Book Now">-->
+<!--                        </div>-->
+<!--                    </form>-->
+<!--                </div>-->
+<!--            </div>-->
+        </div>
+    </div>
+    <!-- room-and-suits-area-end -->
+    <!-- offers-area-start -->
+    <div class="offers-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="offers-carousel owl-carousel">
+                        <div class="offers-box">
+                            <div class="row">
+                                <div class="col-md-5 col-sm-6 col-xs-12">
+                                    <div class="offers-left">
+                                        <h3 class="offers-left-title">Offers</h3>
+                                        <h6 class="offers-left-title2">First Traveller Offer</h6>
+                                        <p class="offers-left-text">Ut non commodo nisl, nec aliquet diam. Aliquam justo nulla, congue eu aliquam nec, malesuada a </p>
+                                        <span class="offers-left-text2">form $280 in Deluex room for 2 people</span>
+                                        <a class="offers-left-book" href="#">Book Now</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="offers-img">
+                                        <img src="{% static 'img/home2/offers-banner.jpg' %}" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="offers-box">
+                            <div class="row">
+                                <div class="col-md-5 col-sm-6 col-xs-12">
+                                    <div class="offers-left">
+                                        <h3 class="offers-left-title">Offers</h3>
+                                        <h6 class="offers-left-title2">First Traveller Offer</h6>
+                                        <p class="offers-left-text">Ut non commodo nisl, nec aliquet diam. Aliquam justo nulla, congue eu aliquam nec, malesuada a </p>
+                                        <span class="offers-left-text2">form $280 in Deluex room for 2 people</span>
+                                        <a class="offers-left-book" href="#">Book Now</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="offers-img">
+                                        <img src="{% static 'img/home2/offers-banner.jpg' %}" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="offers-box">
+                            <div class="row">
+                                <div class="col-md-5 col-sm-6 col-xs-12">
+                                    <div class="offers-left">
+                                        <h3 class="offers-left-title">Offers</h3>
+                                        <h6 class="offers-left-title2">First Traveller Offer</h6>
+                                        <p class="offers-left-text">Ut non commodo nisl, nec aliquet diam. Aliquam justo nulla, congue eu aliquam nec, malesuada a </p>
+                                        <span class="offers-left-text2">form $280 in Deluex room for 2 people</span>
+                                        <a class="offers-left-book" href="#">Book Now</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="offers-img">
+                                        <img src="{% static 'img/home2/offers-banner.jpg' %}" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- offers-area-end -->
+    <!-- special-service2-area-start -->
+    <div class="special-service2-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 col-xs-12">
+                    <div class="special-service2-head">
+                        <div class="section-title text-center">
+                            <div class="st-icon">
+                                <img src="{% static 'img/home1/section-title-icon.png' %}" alt="">
+                            </div>
+                            <h2>Our Special <span>Services</span></h2>
+                            <p>Etiam efficitur, ex vel dignissim rutrum, nibh justo dignissim nisl, sed interdum mauris metus nec ex. Interdum et malesuada fames ac ante ipsum </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="ss2-img">
+                        <img src="{% static 'img/home2/special-1.jpg' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-md-4 col-md-offset-2 col-sm-6 col-xs-12">
+                    <div class="ss2-content">
+                        <h2>Breakfast</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                            <br>
+                            <br> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="ss2-content">
+                        <h2>Breakfast</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                            <br>
+                            <br> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-md-offset-2 col-sm-6 col-xs-12">
+                    <div class="ss2-img">
+                        <img src="{% static 'img/home2/special-2.jpg' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- special-service2-area-end -->
+    <!-- event-testimonial-area-start -->
+    <div class="event-testimonial-area">
+        <div class="event-testimonial-bg-1"></div>
+        <div class="event-testimonial-bg-2"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 col-sm-12 col-xs-12">
+                    <div class="event-area">
+                        <div class="section-title">
+                            <h2>Our <span>EVENTS</span></h2>
+                            <p>Etiam efficitur, ex vel dignissim rutrum, nibh justo dignissim nisl, sed interdum mauris metus nec ex. Interdum et malesuada fames ac ante ipsum </p>
+                        </div>
+                        <div class="event-carousel owl-carousel hidden-xs">
+                            <div class="ec-box">
+                                <img src="{% static 'img/home1/event-banner.jpg' %}" alt="">
+                                <div class="timer-area">
+                                    <div data-countdown="2018/10/16"></div>
+                                </div>
+                            </div>
+                            <div class="ec-box">
+                                <img src="{% static 'img/home1/event-banner.jpg' %}" alt="">
+                                <div class="timer-area">
+                                    <div data-countdown="2018/10/1"></div>
+                                </div>
+                            </div>
+                            <div class="ec-box">
+                                <img src="{% static 'img/home1/event-banner.jpg' %}" alt="">
+                                <div class="timer-area">
+                                    <div data-countdown="2018/10/30"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 col-sm-12 col-xs-12">
+                    <div class="testimonial-area">
+                        <div class="section-title">
+                            <h2>Testim<span>onials</span></h2>
+                            <p>Etiam efficitur, ex vel dignissim rutrum, nibh justo dignissim nisl, sed interdum mauris metus nec ex. Interdum et malesuada fames ac ante ipsum </p>
+                        </div>
+                        <div class="testimonial-carousel owl-carousel">
+                            <div class="testimonial-box">
+                                <div class="tb-img">
+                                    <img src="{% static 'img/home1/testimonial-author.jpg' %}" alt="">
+                                </div>
+                                <div class="tb-content">
+                                    <p>Fusce ultricies, tortor et iaculis tristique, diam ex ullamcorper nisi, ac interdum risus erat id metus. Duis dignissim nulla vitae justo iaculis.</p>
+                                </div>
+                            </div>
+                            <div class="testimonial-box">
+                                <div class="tb-img">
+                                    <img src="img/home1/testimonial-author.jpg" alt="">
+                                </div>
+                                <div class="tb-content">
+                                    <p>Fusce ultricies, tortor et iaculis tristique, diam ex ullamcorper nisi, ac interdum risus erat id metus. Duis dignissim nulla vitae justo iaculis.</p>
+                                </div>
+                            </div>
+                            <div class="testimonial-box">
+                                <div class="tb-img">
+                                    <img src="{% static 'img/home1/testimonial-author.jpg' %}" alt="">
+                                </div>
+                                <div class="tb-content">
+                                    <p>Fusce ultricies, tortor et iaculis tristique, diam ex ullamcorper nisi, ac interdum risus erat id metus. Duis dignissim nulla vitae justo iaculis.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- event-testimonial-area-end -->
+    <!-- blog2-area-start -->
+    <div class="blog2-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                    <div class="blog2-head">
+                        <div class="section-title">
+                            <div class="st-icon">
+                                <img src="{% static 'img/home1/section-title-icon.png' %}" alt="">
+                            </div>
+                            <h2>Latest <span>from blog</span></h2>
+                            <p>Etiam efficitur, ex vel dignissim rutrum, nibh justo dignissim nisl, sed interdum mauris metus nec ex. Interdum et malesuada fames ac ante ipsum </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="single-blog2">
+                        <div class="blog2-img">
+                            <a href="#"><img src="{% static 'img/home2/blog1.jpg' %}" alt=""></a>
+                        </div>
+                        <div class="blog2-content">
+                            <h2 class="b2c-title"><a  href="#">Phasellus eget nisl net</a></h2>
+                            <div class="b2c-meta">
+                                <div class="b2c-meta-date">
+                                    <p><span>12</span> Jun, 2017 </p>
+                                </div>
+                                <div class="b2c-meta-share">
+                                    <span>Share :</span>
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="single-blog2">
+                        <div class="blog2-img">
+                            <a href="#"><img src="img/home2/blog2.jpg" alt=""></a>
+                        </div>
+                        <div class="blog2-content">
+                            <h2 class="b2c-title"><a href="#">Phasellus eget nisl net</a></h2>
+                            <div class="b2c-meta">
+                                <div class="b2c-meta-date">
+                                    <p><span>25</span> Jun, 2017 </p>
+                                </div>
+                                <div class="b2c-meta-share">
+                                    <span>Share :</span>
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- blog2-area-end -->
+    <!-- our-contact-area-start -->
+    <div class="our-contact-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 col-xs-12">
+                    <div class="our-contact-head">
+                        <div class="section-title text-center">
+                            <h2>our <span>contact</span></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="our-contact-box">
+                        <h4 class="ocb-title">Grand Hotel center</h4>
+                        <ul class="ocb-list">
+                            <li>1. rue notre Dame</li>
+                            <li>054875 Cannes </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="our-contact-box">
+                        <h4 class="ocb-title">Contact</h4>
+                        <ul class="ocb-list">
+                            <li>Tel: +123 45678 90 | Fax: +123 45678 00</li>
+                            <li>Email : yourmail@gmail.com</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="our-contact-box">
+                        <h4 class="ocb-title">Gest Arrived</h4>
+                        <p class="ocb-counter"><span class="counter counter-up" data-counterup-time="1500" data-counterup-delay="30">1200</span>+</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="our-contact-box">
+                        <h4 class="ocb-title">Total Booking</h4>
+                        <p class="ocb-counter"><span class="counter counter-up" data-counterup-time="1500" data-counterup-delay="30">5300</span>+</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- our-contact-area-end -->
+    <!-- map-start -->
+    <div id="map"></div>
+    <!-- map-end -->
+{% endblock %}

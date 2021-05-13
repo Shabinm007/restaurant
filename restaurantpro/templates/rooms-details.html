@@ -1,0 +1,154 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% load static %}
+    <!-- others-head-area-start -->
+    <div class="others-head-area oha-rooms">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="others-head">
+                        <h2 class="oh-title">rooms details</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- others-head-area-end -->
+    <!-- page-rooom-details-area-start -->
+    <div class="page-room-details-area">
+        <div class="prda-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-sm-12 col-xs-12">
+                        <div class="prda-top-right">
+                            <div class="rd-tab-content tab-content">
+                                <div id="rd_tab1" class="tab-pane fade in active">
+                                    <div class="rd-tab-box">
+                                        <img src="img/rooms/details1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div id="rd_tab2" class="tab-pane fade">
+                                    <div class="rd-tab-box">
+                                        <img src="img/rooms/details2.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div id="rd_tab3" class="tab-pane fade">
+                                    <div class="rd-tab-box">
+                                        <img src="img/rooms/details3.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div id="rd_tab4" class="tab-pane fade">
+                                    <div class="rd-tab-box">
+                                        <img src="img/rooms/details4.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="prda-top-tab-buttons">
+                                <li class="active"><a data-toggle="tab" href="#rd_tab1"><img src="img/rooms/details1.jpg" alt=""></a></li>
+                                <li><a data-toggle="tab" href="#rd_tab2"><img src="img/rooms/details2.jpg" alt=""></a></li>
+                                <li><a data-toggle="tab" href="#rd_tab3"><img src="img/rooms/details3.jpg" alt=""></a></li>
+                                <li><a data-toggle="tab" href="#rd_tab4"><img src="img/rooms/details4.jpg" alt=""></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="prda-top-left-form reservation-hero">
+                            <h2 class="rh-title">Reservation</h2>
+                            <div class="reservation-hero-form">
+                                <form action="#">
+                                    <div class="rhf-input-box">
+                                        <span>Arrival Date</span>
+                                        <input type="text" id="datepicker" placeholder="Date">
+                                    </div>
+                                    <div class="rhf-input-box">
+                                        <span>Departure Date </span>
+                                        <input type="text" id="datepicker2" placeholder="Date">
+                                    </div>
+                                    <div class="rhf-persons-room">
+                                        <div class="rhf-persons">
+                                            <span>Persons </span>
+                                            <input type="number" value="1">
+                                        </div>
+                                        <div class="rhf-room">
+                                            <span>Room</span>
+                                            <input type="number" value="1">
+                                        </div>
+                                    </div>
+                                    <div class="rhf-send">
+                                        <button><i class="fa fa-check"></i></button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="prda-top-bottom">
+                            <div class="prda-top-bottom-left">
+                                <h3 class="prda-tbl-title">Luxury Room</h3>
+                                <h3 class="prda-tbl-price">$ 200  /</h3>
+                                <h6 class="prda-tbl-duration">PER NIGHT</h6>
+                            </div>
+                            <div class="prda-top-bottom-right">
+                                <div class="prda-tbr-ratings">
+                                    <div class="rating">
+                                        <div class="star star-on"></div>
+                                        <div class="star star-on"></div>
+                                        <div class="star star-on"></div>
+                                        <div class="star star-on"></div>
+                                        <div class="star star-half"></div>
+                                    </div>
+                                </div>
+                                <p class="prda-right-rating-text">(4.3 / 5 Ratings)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="prda-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                        <div class="prda-bottom-left">
+                            <ul>
+                                <li><a href="#">TASTY RESTAURANT</a></li>
+                                <li><a href="#">PURIFIED DRINKING WATER</a></li>
+                                <li><a href="#">NATURAL ENVIRONMENT</a></li>
+                                <li><a href="#">HIGH SPEED WIFI</a></li>
+                                <li><a href="#">CLEAN INTERIORS</a></li>
+                                <li><a href="#">FREE PARKING</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-9 col-sm-8 col-xs-12">
+                        <div class="prda-bottom-right">
+                            <span class="prda-br-title1">de Finibus Bonorum et Malorum", written by Cicero in 45 BC</span>
+                            <p class="prda-br-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <span class="prda-br-title2">SPECIAL ROOM</span>
+                                    <ul class="prda-br-list">
+                                        <li>Max: 4 Person(s)</li>
+                                        <li>Size: 35 m2 / 376 ft2</li>
+                                        <li>View: Ocen</li>
+                                        <li>Bed: King-size or twin beds</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <span class="prda-br-title2">SERVICE ROOM</span>
+                                    <ul class="prda-br-list">
+                                        <li>Oversized work desk</li>
+                                        <li>Hairdryer</li>
+                                        <li>Iron/ironing board upon request</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- page-rooom-details-area-end -->
+ {% endblock %}

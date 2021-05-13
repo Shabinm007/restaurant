@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% load static %}
+    <!-- others-head-area-start -->
+    <div class="others-head-area oha-contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="others-head">
+                        <h2 class="oh-title">Contact</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- others-head-area-end -->
+    <!-- find-location-area-start -->
+    <div class="find-location-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 col-sm-12 col-xs-12">
+                    <div class="find-location-head">
+                        <div class="section-title text-center">
+                            <h2>Find <span>Our location</span></h2>
+                            <p>Etiam efficitur, ex vel dignissim rutrum, nibh justo dignissim nisl, sed interdum mauris metus nec ex. Interdum et malesuada fames ac ante ipsum </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+                    <div class="find-location-map">
+                        <div class="gmap">
+                            <div id="googleMap"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- find-location-area-end -->
+    <!-- contact-areas-start -->
+    <div class="contact-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 col-sm-12 col-xs-12">
+                    <div class="contact-area-head">
+                        <div class="section-title text-center">
+                            <h2>Use Form to <span>contact us</span></h2>
+                            <p>Etiam efficitur, ex vel dignissim rutrum, nibh justo dignissim nisl, sed interdum mauris metus nec ex. Interdum et malesuada fames ac ante ipsum </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5 col-sm-4 col-xs-12">
+                    <div class="contact-elements">
+                        <div class="ce-box">
+                            <h2>Meet Us</h2>
+                            <p>Architecture Downtown St, </p>
+                            <p>Melbourne Australia</p>
+                        </div>
+                        <div class="ce-box">
+                            <h2>phone</h2>
+                            <p>(+1) 1245 - 15487- 258</p>
+                            <p>(+1) 1245 - 15487- 258</p>
+                        </div>
+                        <div class="ce-box">
+                            <h2>email</h2>
+                            <p>indo@yormail.com</p>
+                            <p>yourmail@gmail.com</p>
+                        </div>
+                        <div class="ce-box">
+                            <h2>website</h2>
+                            <a href="#">http://www.yourwebsite.com</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7 col-sm-8 col-xs-12">
+                    <div class="contact-form-area">
+                        <div class="cf-msg"></div>
+                        <form action="http://themeinnovation.com/demo2/html/grand-preview/grand/mail.php" method="post" id="cf">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="cf-input-box">
+                                        <input type="text" placeholder="Your name here" id="fname" name="fname">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="cf-input-box">
+                                        <input type="email" placeholder="Email" id="email" name="email">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="cf-input-box">
+                                        <input type="text" placeholder="Subject" id="subject" name="subject">
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div class="cf-input-box">
+                                        <textarea class="contact-textarea" placeholder="Message" id="msg" name="msg"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div class="cf-input-box">
+                                        <button id="submit" class="cont-submit btn-contact hvr-bs" name="submit">SEND MESSAGE</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- contact-areas-end -->
+  {% endblock %}

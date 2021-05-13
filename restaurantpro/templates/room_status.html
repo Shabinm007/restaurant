@@ -1,0 +1,67 @@
+
+
+
+
+
+{% extends 'base.html' %}
+{% block content %}
+
+{% load static %}
+    <!-- others-head-area-start -->
+    <div class="others-head-area oha-gallery">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="others-head">
+                        <h2 class="oh-title">Room Status</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- others-head-area-end -->
+    <!-- gallery-masonary-area-start -->
+    <div class="gallery-masonary-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 col-xs-12">
+                    <div class="special-service-head">
+                        <div class="section-title text-center">
+                            <div class="st-icon">
+                                <img src="img/home1/section-title-icon.png" alt="">
+                            </div>
+                            <h2>Room <span>Status</span></h2>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% for room in rooms %}
+                {% if room.Available %}
+                    <input type="button" value="{{room.Room_Code}}" style="width:100px;height:100px;font-bold:True;font-size:25px;color:black;background-color:Green" >
+                {% else %}
+                    {% if room.Reserved %}
+                        <input type="button" value="{{room.Room_Code}}" style="width:100px;height:100px;font-bold:True;font-size:25px;color:black;background-color:Blue" >
+                    {% else %}
+                        <input type="button" value="{{room.Room_Code}}" style="width:100px;height:100px;font-bold:True;font-size:25px;color:black;background-color:Red" >
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+
+        </div>
+    </div>
+    <!-- gallery-masonary-area-end -->
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
